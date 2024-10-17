@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sliding Card Slider</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .card-slider {
+            position: relative;
+            width: 300px;
+            /* Width of a single card */
+            overflow: hidden;
+            /* Hide overflow for sliding effect */
+        }
+
+        .card-container {
+            display: flex;
+            transition: transform 0.5s ease;
+            /* Smooth transition */
+        }
+
+        .kayaking_card {
+            min-width: 300px;
+            /* Ensure all cards have the same width */
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 13px;
+            margin-right: 15px;
+            /* Space between cards */
+        }
+
+        .kayaking_card img {
+            width: 100%;
+            border-radius: 13px 13px 0 0;
+            /* Rounded top corners */
+        }
+
+        .kayaking_card .k {
+            font-size: 17px;
+            font-weight: 500;
+            padding: 10px;
+        }
+
+        .details_p_v1 {
+            background-image: linear-gradient(98deg, #0b66c2, #009ad6);
+            color: white;
+            padding: 10px;
+            border-radius: 0 0 13px 13px;
+            /* Rounded bottom corners */
+        }
+
+        button {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card-slider">
+        <div class="card-container" id="cardContainer">
+            <div class="kayaking_card" id="card1">
+                <img src="assets_/pngegg.png" alt="">
+                <p class="k">Kayaking</p>
+                <div class="details_p_v1">
+                    <p class="k_1">"I know Vaibhav as the guy who is killing it on LinkedIn."</p>
+                </div>
+            </div>
+
+            <div class="kayaking_card" id="card2">
+                <img src="assets_/pngegg.png" alt="">
+                <p class="k">Surfing</p>
+                <div class="details_p_v1">
+                    <p class="k_1">"Surfing is an amazing way to connect with nature."</p>
+                </div>
+            </div>
+
+            <div class="kayaking_card" id="card3">
+                <img src="assets_/pngegg.png" alt="">
+                <p class="k">Mountain Biking</p>
+                <div class="details_p_v1">
+                    <p class="k_1">"Mountain biking offers thrilling adventures."</p>
+                </div>
+            </div>
+
+            <div class="kayaking_card" id="card4">
+                <img src="assets_/pngegg.png" alt="">
+                <p class="k">Rock Climbing</p>
+                <div class="details_p_v1">
+                    <p class="k_1">"Rock climbing challenges both body and mind."</p>
+                </div>
+            </div>
+        </div>
+
+        <button onclick="prevCard()">Left Slide</button>
+        <button onclick="nextCard()">Right Slide</button>
+    </div>
+
+    <script>
+        let currentCard = 0; // Index of the currently displayed card
+        const cards = document.querySelectorAll('.kayaking_card');
+        const cardContainer = document.getElementById('cardContainer');
+
+        function updateSlider() {
+            const offset = -currentCard * (300 + 15); // Calculate offset based on card width and margin
+            cardContainer.style.transform = `translateX(${offset}px)`;
+        }
+
+        function nextCard() {
+            if (currentCard < cards.length - 1) {
+                currentCard++; // Move to the next card
+            } else {
+                currentCard = 0; // Loop back to the first card
+            }
+            updateSlider();
+        }
+
+        function prevCard() {
+            if (currentCard > 0) {
+                currentCard--; // Move to the previous card
+            } else {
+                currentCard = cards.length - 1; // Loop back to the last card
+            }
+            updateSlider();
+        }
+    </script>
+
+</body>
+
+</html>

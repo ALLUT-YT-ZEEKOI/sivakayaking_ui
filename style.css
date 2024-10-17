@@ -29,39 +29,11 @@ body {
 
 .siva {
     color: var(--primary-color);
-    display: inline-block;
-    overflow: hidden;
-    white-space: nowrap;
-    /* Ensures text doesn't wrap */
-    /* border-right: 2px solid; */
-    /* Creates the cursor effect */
-    width: 0;
-    animation: typing 4s steps(20) 1s forwards, blink 0.75s step-end infinite;
+
+
 }
 
-@keyframes typing {
-    from {
-        width: 0;
-    }
 
-    to {
-        width: 12ch;
-    }
-
-    /* Adjust this based on the number of characters */
-}
-
-@keyframes blink {
-
-    from,
-    to {
-        border-color: transparent;
-    }
-
-    50% {
-        border-color: black;
-    }
-}
 
 .dis {
     font-size: 18px;
@@ -146,11 +118,12 @@ body {
 
 .bottpnm_v {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    align-items: center;
 }
 
 .btn_p {
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 600;
     line-height: 0;
     padding: 14px 5px 0px 19px;
@@ -161,26 +134,72 @@ body {
     background: linear-gradient(139deg, rgba(2, 59, 117, 1) 38%, rgb(0 0 0 / 83%) 74%, rgb(0 0 0 / 75%) 97%);
     padding: 8px 5px 8px 20px;
     color: white;
-    border-top-left-radius: 29px;
-    border-bottom-left-radius: 4px;
-    font-weight: 300;
+    border-radius: 39px;
+    /* border-top-left-radius: 29px; */
+    /* border-bottom-left-radius: 4px; */
+    font-weight: 400;
     cursor: pointer;
-    opacity: 0;
-    transform: translateX(-50px);
-    animation: slideIn 2s ease-out forwards;
-    transition: transform 0.3s ease, background 0.3s ease;
+    padding: 16px 27px 16px 27px;
+    margin-left: 18px;
 }
 
-/* Animation keyframes */
-@keyframes slideIn {
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
+.biggest {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 27px;
 }
 
-/* Hover effect */
-.botm_btn:hover {
-    background: linear-gradient(139deg, rgba(2, 59, 117, 1) 38%, rgb(0 0 0 / 95%) 74%, rgb(0 0 0 / 85%) 97%);
-    transform: translateX(10px);
+
+.kayaking_card {
+
+    background-color: #fff;
+
+    /* border-radius: 15px;/ */
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+    transition: transform 0.3s, box-shadow 0.3s;
+
+    /* overflow: hidden; */
+    margin-top: 36px;
+    position: relative;
+
+    padding: 0px 0px 0px 0px;
+
+    width: 300px;
+
+    border-radius: 13px;
+}
+
+/* 3D hover effect */
+.kayaking_card:hover {
+    /* transform: translateY(-10px); */
+    /* box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); */
+}
+
+.kayaking_card img {
+    width: 97px;
+    position: absolute;
+    top: -35px;
+    right: -32px;
+}
+
+.kayaking_card .k {
+    font-size: 17px;
+    font-weight: 500;
+    padding: 27px 5px 5px 9px;
+    line-height: 12px;
+}
+
+.details_p_v1 {
+    background-image: linear-gradient(98deg, #0b66c2, #009ad6);
+    color: white;
+    font-size: 14px;
+    line-height: 19px;
+    /* padding: 5px; */
+    padding: 13px 3px 1px 6px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
 }
