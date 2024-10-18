@@ -145,61 +145,70 @@ body {
 
 .biggest {
     text-align: center;
-    margin-top: 15px;
+    margin-top: 30px;
     font-size: 27px;
 }
 
-
-.kayaking_card {
-
-    background-color: #fff;
-
-    /* border-radius: 15px;/ */
-
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-
-    transition: transform 0.3s, box-shadow 0.3s;
-
-    /* overflow: hidden; */
-    margin-top: 36px;
+.card-slider {
     position: relative;
-
-    padding: 0px 0px 0px 0px;
-
     width: 300px;
-
-    border-radius: 13px;
+    /* Width of a single card */
+    /* overflow: hidden; */
+    /* Hide overflow for sliding effect */
+    margin-top: 46px;
 }
 
-/* 3D hover effect */
-.kayaking_card:hover {
-    /* transform: translateY(-10px); */
-    /* box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); */
+.card-container {
+    display: flex;
+    transition: transform 0.5s ease;
+    /* Smooth transition */
+}
+
+.kayaking_card {
+    position: relative;
+    min-width: 300px;
+    /* Ensure all cards have the same width */
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 13px;
+    margin-right: 15px;
+    /* Space between cards */
 }
 
 .kayaking_card img {
-    width: 97px;
+    width: 36%;
     position: absolute;
-    top: -35px;
-    right: -32px;
+    border-radius: 13px 13px 0 0;
+    /* border-radius: 13px 13px 0 0; */
+    /* Rounded top corners */
+    left: 217px;
+    top: -59px;
+
 }
 
 .kayaking_card .k {
     font-size: 17px;
     font-weight: 500;
-    padding: 27px 5px 5px 9px;
-    line-height: 12px;
+    padding: 10px;
 }
 
 .details_p_v1 {
     background-image: linear-gradient(98deg, #0b66c2, #009ad6);
     color: white;
-    font-size: 14px;
-    line-height: 19px;
-    /* padding: 5px; */
-    padding: 13px 3px 1px 6px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    border-bottom-left-radius: 6px;
-    border-bottom-right-radius: 6px;
+    padding: 10px;
+    border-radius: 0 0 13px 13px;
+    /* Rounded bottom corners */
+}
+
+.btn_v4 {
+    margin-top: 25px;
+    border-radius: 50px;
+    font-size: 13px;
+    height: 45px;
+    width: 47px;
+    margin: 10px;
+    color: white;
+    background-image: linear-gradient(99deg, #012d64, #06b0ff);
+    border: none;
+    padding: 13px;
 }
