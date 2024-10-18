@@ -24,7 +24,8 @@ body {
     text-align: center;
     display: flex;
     justify-content: center;
-
+    margin-top: 12px;
+    margin-bottom: 5px;
 }
 
 .siva {
@@ -87,7 +88,7 @@ body {
     font-weight: 500;
     /* display: flex; */
     padding: 5px 19px 5px 19px;
-    margin-top: 10px;
+    margin-top: 14px;
 }
 
 .btn_img {
@@ -155,7 +156,7 @@ body {
     /* Width of a single card */
     /* overflow: hidden; */
     /* Hide overflow for sliding effect */
-    margin-top: 46px;
+    margin-top: 44px;
 }
 
 .card-container {
