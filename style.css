@@ -18,6 +18,11 @@ body {
     /* margin-bottom: 10px; */
 }
 
+.logo_v2 {
+    width: 117px;
+    padding: 15px;
+}
+
 .wel-come {
     font-size: 25px;
     font-weight: 500;
@@ -63,6 +68,7 @@ body {
     padding: 20px;
     font-size: 14px;
     margin-top: 23px;
+    width: 100%;
     text-align: center;
 }
 
@@ -214,36 +220,29 @@ body {
     padding: 13px;
 }
 
-.profile_div {
-    /* border: 1px solid black; */
-    padding: 8px 10px 0px 8px;
-    display: flex;
-    width: 100%;
-    border-radius: 5px;
-    /* border: 1px groove black; */
-    padding: 8px 10px 0px 8px;
-    display: flex;
-    width: 100%;
-    border-radius: 18px;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2), -4px -4px 10px rgba(255, 255, 255, 0.5);
-    /* 3D shadow */
-}
 
-.man {
-    /* font-size: 12px; */
-    padding-top: 5px;
+
+
+.profile_details {
+    left: 0px;
+    position: absolute;
+    width: 95%;
+    /* height: 100px; */
+    background: #ffffff;
+    color: #000000;
     text-align: center;
-    margin-top: 30px;
-    font-size: 26px;
-    padding-bottom: 7px;
+    right: 0px;
+    bottom: 0;
+    border-radius: 10px;
+    padding: 10px 1px 0px 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    perspective: 1000px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-.profile_img {
-    /* width: 100px; */
-    height: 112px;
-    /* background: black; */
-    padding: 5px 5px 25px 5px;
-    border-radius: 7px;
+.name_admin {
+    color: var(--primary-color);
+    font-size: 17px;
+    line-height: 0;
+    font-weight: 600;
 }
-
-.profile_details {}
